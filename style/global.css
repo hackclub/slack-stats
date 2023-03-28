@@ -1,0 +1,175 @@
+html, body, .outer-container, nav, .main-container {
+	height: 100%;
+}
+
+html {
+	background: #f8f9fa;
+	color: #212529;
+	font-size: 0.9em;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Inter;
+}
+
+.outer-container {
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	width: 100%;
+	max-width: 1450px;
+}
+
+/* Sidebar */
+nav {
+	width: 100%;
+	max-width: 250px;
+	overflow: auto;
+	padding: 30px 10px;
+}
+
+nav hr {
+	border: none;
+	border-top: 1px solid #ced4da;
+	margin: 10px 15px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+nav a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	background: none;
+	padding: 14px 20px;
+	border-radius: 10px;
+	color: #495057;
+}
+
+nav a:hover {
+	color: #212529;
+	background: #f1f3f5;
+}
+
+nav a.active {
+	color: #212529;
+	background: #e9ecef;
+	font-weight: bold;
+}
+
+/* Main Container */
+.main-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+}
+
+main {
+	height: fit-content;
+	width: 100%;
+	max-width: 800px;
+	padding: 30px 10px;
+}
+
+h1 {
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 2.4rem;
+}
+
+.source {
+	margin: 0;
+	margin-bottom: 30px;
+	color: #868e96;
+}
+
+/* Tables */
+table {
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #ced4da;
+	border-spacing: 0;
+	overflow: hidden;
+}
+
+td, th {
+	border: none;
+	margin: 0;
+	padding: 10px 14px;
+}
+
+td:not(:first-child), th:not(:first-child) {
+	border-left: 1px solid #ced4da;
+}
+
+tr:not(:last-child) td, th {
+	border-bottom: 1px solid #ced4da;
+}
+
+tr:nth-child(even) {
+	background-color: #f1f3f5;
+}
+
+th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+
+/* Misc. */
+.delta {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2px;
+	font-variant-numeric: tabular-nums;
+}
+
+.delta svg {
+	display: block;
+	height: 1em;
+	width: 1em;
+}
+
+.raw-stats {
+	margin-top: 30px;
+}
+
+.raw-stats .stat {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.spinner svg {
+	--size: 35px;
+	display: block;
+	width: var(--size);
+	height: var(--size);
+	animation: spin 1s linear infinite;
+	margin: 40px auto;
+	color: #868e96;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
