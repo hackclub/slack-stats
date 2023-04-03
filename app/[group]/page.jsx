@@ -102,7 +102,7 @@ export default async function GroupPage(props) {
 			</colgroup>
 			<thead>
 				<tr>
-					<th>Week</th>
+					<th>Week Start</th>
 					<th>People</th>
 					<th>Posters</th>
 					<th>Messages</th>
