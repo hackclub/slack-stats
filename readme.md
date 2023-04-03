@@ -4,21 +4,21 @@ A little web app to collect and visualize weekly stats for the Hack Club Slack f
 
 ## Maintenance
 
-**Configuration:**
+### Configuration:
 
 Open the [Slack Stats](https://airtable.com/appfewDQPFde2gvcC/) base in the Hack Club airtable. You'll need org access.
 
-**Deployment and logs:**
+### Deployment and logs:
 
 This is deployed on Vercel to [slack-stats.hackclub.dev](https://slack-stats.hackclub.dev/). Password protection is configured on the Vercel side. The [project](https://vercel.com/hackclub/slack-stats/) is under Hack Club's Vercel org.
 
-**Run locally:**
+### Run locally:
 
 Clone the repo and run `yarn` to install dependencies. Then run `yarn dev` to start the development server.
 
 You can run `yarn sync` to sync new Slack stats to Airtable.
 
-**Environment variables:**
+### Environment variables:
 
 - `AIRTABLE_API_KEY`: Personal access token that should have access to the Airtable base. Create one at the [Airtable developer center](https://airtable.com/create/tokens).
 - `SLACK_XOXC`:
