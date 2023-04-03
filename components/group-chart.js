@@ -65,7 +65,7 @@ export default function GroupChart({ stats, items, events, beginAtZero }) {
 		...event,
 		index: mapRange(event.date, stats[0].week, stats[stats.length - 1].week, 0, stats.length - 1)
 	})).filter(event => event.index > 0 && event.index <= stats.length - 1)
-	indexedEvents.sort((a, b) => a.index - b.index)
+	indexedEvents.sort((a, b) => b.index - a.index)
 
 	return (<>
 		<Line
