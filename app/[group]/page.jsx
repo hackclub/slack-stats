@@ -78,6 +78,7 @@ export default async function GroupPage(props) {
 				viewers: 0
 			})
 	})
+	const reverseStats = stats.slice().reverse()
 
 	return (<>
 		<h1>{group}</h1>
@@ -108,7 +109,7 @@ export default async function GroupPage(props) {
 				</tr>
 			</thead>
 			<tbody>
-				{stats.map((stat, i) => {
+				{reverseStats.map((stat, i) => {
 					return (
 						<tr key={stat.week}>
 							<td>{format(stat.week, 'LLLL d, yyyy')}</td>
@@ -116,7 +117,7 @@ export default async function GroupPage(props) {
 								<td key={key}>
 									<div className='stat'>
 										{stat[key]}
-										<Delta iconSide='right' a={(stats[i - 1] ?? stat)[key]} b={stat[key]} />
+										<Delta iconSide='right' a={(reverseStats[i + 1] ?? stat)[key]} b={stat[key]} />
 									</div>
 								</td>
 							))}

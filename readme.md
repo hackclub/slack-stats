@@ -14,9 +14,11 @@ This is deployed on Vercel to [slack-stats.hackclub.dev](https://slack-stats.hac
 
 ### Run locally:
 
-Clone the repo and run `yarn` to install dependencies. Then run `yarn dev` to start the development server.
+Clone the repo, `cd` into it, and run `yarn` to install dependencies.
 
-You can run `yarn sync` to sync new Slack stats to Airtable.
+Run `yarn dev` to start the development server for the website.
+
+Run `yarn sync` to sync new Slack stats to Airtable.
 
 ### Environment variables:
 
