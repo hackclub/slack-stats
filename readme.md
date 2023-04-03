@@ -20,6 +20,8 @@ You can run `yarn sync` to sync new Slack stats to Airtable.
 
 ### Environment variables:
 
+Put these in a `.env` file in the project root using newline-separated `KEY=VALUE` format.
+
 - `AIRTABLE_API_KEY`: Personal access token that should have access to the Airtable base. Create one at the [Airtable developer center](https://airtable.com/create/tokens).
 - `SLACK_XOXC`:
 	- Load the [official Slack stats page](https://hackclub.slack.com/admin/stats)
