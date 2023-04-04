@@ -14,8 +14,22 @@ export default async function RootPage() {
 		<h1>Slack Stats</h1>
 		<p>Last sync: {format(lastSync, `EEEE, MMMM do 'at' H:mm`)}</p>
 		<p>
+			A little web app to collect and visualize weekly stats for the Hack Club Slack. Statistics are fun and help us make the Slack better, but Slack's official stats page kinda sucks!
+		</p>
+
+		<p>
+			<a href='https://github.com/hackclub/slack-stats/' target='_blank'>
+				Source code &raquo;
+			</a>
+		</p>
+		<p>
 			<a href={`https://airtable.com/${baseId}`} target='_blank'>
 				Configuration in Airtable &raquo;
+			</a>
+		</p>
+		<p>
+			<a href='https://airtable.com/shrchjsMgctNzkEDt' target='_blank'>
+				Public Airtable (read only) &raquo;
 			</a>
 		</p>
 		<p>

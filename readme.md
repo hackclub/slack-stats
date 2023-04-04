@@ -1,6 +1,10 @@
-# Slack Stats
+# [Slack Stats](https://slack-stats.hackclub.dev/)
 
-A little web app to collect and visualize weekly stats for the Hack Club Slack for community manager people. Uses Airtable for configuration and as a database.
+A little web app to collect and visualize weekly stats for the Hack Club Slack. Statistics are fun and help us make the Slack better, but Slack's official stats page kinda sucks!
+
+Stack: Next.js 13 beta with app directory. Airtable for configuration and as a database.
+
+![screenshot of the sprig stats page](https://doggo.ninja/W9haC6.png)
 
 ## Maintenance
 
@@ -8,9 +12,11 @@ A little web app to collect and visualize weekly stats for the Hack Club Slack f
 
 Open the [Slack Stats](https://airtable.com/appfewDQPFde2gvcC/) base in the Hack Club airtable. You'll need org access.
 
+If you don't have access to the Hack Club org on Airtable, you can access a read-only copy of the database: [airtable.com/shrchjsMgctNzkEDt](https://airtable.com/shrchjsMgctNzkEDt)
+
 ### Deployment and logs:
 
-This is deployed on Vercel to [slack-stats.hackclub.dev](https://slack-stats.hackclub.dev/). Password protection is configured on the Vercel side. The [project](https://vercel.com/hackclub/slack-stats/) is under Hack Club's Vercel org.
+This is deployed on Vercel to [slack-stats.hackclub.dev](https://slack-stats.hackclub.dev/). The [project](https://vercel.com/hackclub/slack-stats/) is under Hack Club's Vercel org.
 
 ### Run locally:
 

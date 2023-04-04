@@ -16,6 +16,11 @@ body {
 	font-family: Inter, sans-serif;
 }
 
+p {
+	color: #495057;
+	line-height: 1.6;
+}
+
 .outer-container {
 	overflow: hidden;
 	display: flex;
