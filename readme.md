@@ -2,6 +2,8 @@
 
 A little web app to collect and visualize weekly stats for the Hack Club Slack. Statistics are fun and help us make the Slack better, but Slack's official stats page kinda sucks!
 
+Feel free to suggest or add features by opening an issue or pull request.
+
 Stack: Next.js 13 beta with app directory. Airtable for configuration and as a database.
 
 ![screenshot of the sprig stats page](https://doggo.ninja/W9haC6.png)
