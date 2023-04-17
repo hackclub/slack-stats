@@ -103,7 +103,7 @@ export default function GroupChart({ stats, items, events, beginAtZero }) {
 								color: '#364fc7',
 								backgroundColor: '#bac8ffaa',
 								opacity: 0.5,
-								content: [ event.name, 'December 18, 2022' ],
+								content: [ event.name, format(event.date, 'LLLL d, yyyy') ],
 								display: true,
 								font: {
 									family: Chart.defaults.font.family,
