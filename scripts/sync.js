@@ -1,13 +1,43 @@
-import { channelsDb, statsDb, lastSyncDb, lastSyncRecord } from '../lib/server/airtable.js'
+import { channelsDb, statsDb, eventsDb, lastSyncDb, lastSyncRecord } from '../lib/server/airtable.js'
 import { getStatsForWeek } from '../lib/server/slack.js'
-import { parseISO, formatISO, eachWeekOfInterval, previousSaturday } from 'date-fns'
+import { parseISO, formatISO, eachWeekOfInterval, previousSaturday, isSunday } from 'date-fns'
 
 const channels = await channelsDb.select({
-	fields: [ 'Channel Name', 'Stats Start Week', 'Automated: Channel ID' ]
+	fields: [ 'Channel Name', 'Group', 'Stats Start Week', 'Automated: Channel ID' ]
 }).all()
 const stats = await statsDb.select({
 	fields: [ 'Channel ID', 'Week' ]
 }).all()
+const events = await eventsDb.select({
+	fields: [ 'Event Name', 'Date' ]
+}).all()
+
+// Validate channels and events
+for (const channel of channels) {
+	if (!channel.get('Channel Name') || !channel.get('Group') || !channel.get('Stats Start Week')) {
+		console.log()
+		console.error('A channel is missing a name, group, or start week!')
+		console.error('Make sure all fields of all channels are filled in and there are no blank rows.')
+		console.log()
+		process.exit(1)
+	}
+
+	if (!isSunday(parseISO(channel.get('Stats Start Week')))) {
+		console.log()
+		console.error(`Start week for channel #${channel.get('Channel Name')} must be a Sunday`)
+		console.log()
+		process.exit(1)
+	}
+}
+for (const event of events) {
+	if (!event.get('Event Name') || !event.get('Date')) {
+		console.log()
+		console.error('An event is missing a name or date!')
+		console.error('Make sure all fields of all events are filled in and there are no blank rows.')
+		console.log()
+		process.exit(1)
+	}
+}
 
 const newStats = []
 
