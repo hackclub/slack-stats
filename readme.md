@@ -20,6 +20,8 @@ If you don't have access to the Hack Club org on Airtable, you can access a read
 
 This is deployed on Vercel to [slack-stats.hackclub.dev](https://slack-stats.hackclub.dev/). The [project](https://vercel.com/hackclub/slack-stats/) is under Hack Club's Vercel org.
 
+GitHub Actions should automatically run a sync job every Sunday.
+
 ### Run locally:
 
 Clone the repo, `cd` into it, and run `yarn` to install dependencies.
