@@ -28,3 +28,7 @@ jobs:
 
       - name: Sync
         run: yarn sync
+        env:
+          SLACK_XOXC: ${{ secrets.SLACK_XOXC }}
+          SLACK_XOXD: ${{ secrets.SLACK_XOXD }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
