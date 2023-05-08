@@ -58,6 +58,10 @@ export default async function GroupPage(props) {
 
 	const minWeek = Math.min(...statsData.map(s => parseISO(s.get('Week')).getTime()))
 	const maxWeek = Math.max(...statsData.map(s => parseISO(s.get('Week')).getTime()))
+
+	if (minWeek === Infinity || maxWeek === -Infinity)
+		throw new Error('No data has been collected for this group yet!')
+
 	const stats = eachWeekOfInterval({
 		start: new Date(minWeek),
 		end: new Date(maxWeek)

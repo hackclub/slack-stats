@@ -25,6 +25,11 @@ export default async function RootPage() {
 			</a>
 		</p>
 		<p>
+			<a href='https://github.com/hackclub/slack-stats/actions/workflows/sync.yml' target='_blank'>
+				Weekly sync in GitHub Actions &raquo;
+			</a>
+		</p>
+		<p>
 			<a href={`https://airtable.com/${baseId}`} target='_blank'>
 				Configuration in Airtable &raquo;
 			</a>
