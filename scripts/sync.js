@@ -111,7 +111,7 @@ try {
 		}
 	}
 
-	console.log('All done! Setting last sync time')
+	console.log('Setting last sync time')
 	lastSyncDb.update(lastSyncRecord, { 'Last Sync': formatISO(new Date()) })
 } catch (error) {
 	console.log(`An error occurred! Saving ${newStats.length} stats to Airtable`)
