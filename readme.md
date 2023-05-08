@@ -1,5 +1,7 @@
 # [Slack Stats](https://slack-stats.hackclub.dev/)
 
+[![Weekly Sync](https://github.com/hackclub/slack-stats/actions/workflows/sync.yml/badge.svg?branch=main)](https://github.com/hackclub/slack-stats/actions/workflows/sync.yml)
+
 A little web app to collect and visualize weekly stats for the Hack Club Slack. Statistics are fun and help us make the Slack better, but Slack's official stats page kinda sucks!
 
 Feel free to suggest or add features by opening an issue or pull request.
