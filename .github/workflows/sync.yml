@@ -12,7 +12,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     container: node:16
-    environment: Production
     
     steps:
       - name: Checkout
