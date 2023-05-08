@@ -28,6 +28,13 @@ for (const channel of channels) {
 		console.log()
 		process.exit(1)
 	}
+
+	if (previousSaturday(new Date()) < parseISO(channel.get('Stats Start Week'))) {
+		console.log()
+		console.error(`Start week for channel #${channel.get('Channel Name')} is less than a week ago`)
+		console.log()
+		process.exit(1)
+	}
 }
 for (const event of events) {
 	if (!event.get('Event Name') || !event.get('Date')) {
@@ -107,10 +114,15 @@ try {
 	console.log('All done! Setting last sync time')
 	lastSyncDb.update(lastSyncRecord, { 'Last Sync': formatISO(new Date()) })
 } catch (error) {
-	console.error(error)
-} finally {
-	console.log(`Saving ${newStats.length} remaining stats to Airtable`)
+	console.log(`An error occurred! Saving ${newStats.length} stats to Airtable`)
 	while (newStats.length > 0) await statsDb.create(newStats.splice(0, 10))
+	
+	console.log()
+	console.error(error)
+	console.log()
+	process.exit(1)
 }
 
-console.log('Script finished')
+console.log(`Saving ${newStats.length} remaining stats to Airtable`)
+while (newStats.length > 0) await statsDb.create(newStats.splice(0, 10))
+console.log('All done!')
