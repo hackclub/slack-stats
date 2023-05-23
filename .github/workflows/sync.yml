@@ -3,7 +3,7 @@ name: Weekly Sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: '42 10 * * 0' # Every Sunday at 10:42
+    - cron: '42 8 * * 2' # Every Tuesday at 8:42
 
 permissions:
   contents: read
