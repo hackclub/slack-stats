@@ -1,3 +1,9 @@
+⚠️ This repo is deprecated
+
+Looking for data? We moved to [Projects Weekly Reporting](https://github.com/hackclub/projects-weekly-reporting) instead.
+
+---
+
 # [Slack Stats](https://slack-stats.hackclub.dev/)
 
 [![Weekly Sync](https://github.com/hackclub/slack-stats/actions/workflows/sync.yml/badge.svg?branch=main)](https://github.com/hackclub/slack-stats/actions/workflows/sync.yml)
